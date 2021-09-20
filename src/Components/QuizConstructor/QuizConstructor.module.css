@@ -1,0 +1,131 @@
+.QuizConstructor {
+    background: #EFE1BA;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.QuizConstructor .QuestionWrapper {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.QuizConstructor .TaskNumber {
+    text-align: center;
+    color: #fff;
+    font-size: 39px;
+}
+
+
+.QuizConstructor .InputRow {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.QuizConstructor .InputRow .Label {
+    color: #6F2232;
+    font-size: 20px;
+    margin-right: 8px !important;
+}
+
+.QuizConstructor .Save {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    padding: 12px 32px;
+    font-size: 25px;
+    cursor: pointer;
+    background: #FFC001;
+    border: 0;
+    border-radius: 8px;
+}
+
+.QuizConstructor .AddTaks {
+    margin: 30px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background: #4157A1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: .2s;
+}
+
+.QuizConstructor .AddTaks:hover {
+    transform: rotate(15deg)
+}
+
+.QuizConstructor .AddTaks i {
+    color: #fff;
+    font-size: 25px;
+}
+
+.QuizConstructor .InputRow input[type="text"] {
+    border: 0;
+    box-shadow: 0px -1px 23px -7px rgba(34, 60, 80, 0.2);
+    padding: 6px 8px;
+    border-radius: 9px;
+    width: 100%;
+    font-size: 16px;
+    color: #2C3532;
+}
+
+.QuizConstructor .RemoveTask {
+    position: absolute;
+    right: 0;
+    color: #F03C1E;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.QuizConstructor .AddAnswer {
+    border: 0;
+    margin: 10px 0 20px 0;
+    border-radius: 9px;
+    cursor: pointer;
+    background:#5CDC95;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.QuizConstructor .InputRow.Name {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.QuizConstructor .InputRow.Name p {
+    font-size: 30px;
+}
+
+.QuizConstructor .InputRow.Name input {
+    font-size: 30px;
+}
+
+.QuizConstructor .InputRow.Question {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+    .QuizConstructor .InputRow.Name {
+        width: 300px;
+    }
+
+    .QuizConstructor .InputRow.Name .Label {
+        font-size: 20px;
+    }
+
+    .QuizConstructor .InputRow.Name input {
+        font-size: 20px;
+    }
+}

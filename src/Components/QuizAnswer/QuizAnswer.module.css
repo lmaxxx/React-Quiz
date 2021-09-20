@@ -1,0 +1,21 @@
+.QuizAnswer {
+    font-size: 25px;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-bottom: 20px !important;
+    border-radius: 10px;
+    cursor: pointer;
+    word-wrap: break-word;
+    transition: all 0.2s;
+}
+
+.QuizAnswer:hover {
+    color: rgba(253,193,104,1);
+    background-color: #fff;
+}
+
+@media (max-width: 420px) {
+    .QuizAnswer {
+        font-size: 19px;
+    }
+}

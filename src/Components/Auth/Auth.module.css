@@ -1,0 +1,74 @@
+.Auth {
+    height: 100vh;
+    width: 100%;
+    background: #222629;
+    display: grid;
+    place-items: center;
+}
+
+.Auth .AuthForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Auth .AuthForm h1 {
+    margin-bottom: 30px;
+    font-size: 34px;
+    color: #FFE401;
+}
+
+.Auth .Submit {
+    background: initial;
+    border: 1px solid #87c232;
+    color: #87c232;
+    font-family: 'Zen Dots', sans-serif;
+    padding: 12px 32px;
+    cursor: pointer;
+    font-size: 19px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.Auth .Submit::before {
+    content: '';
+    height: 70px;
+    width: 23px;
+    position: absolute;
+    z-index: 1;
+    top: -12px;
+    background: rgba(255, 255, 255, 0.1);
+    left: -40px;
+    transform: rotate(30deg);
+    transition: .5s;
+}
+
+.Auth .Submit:hover::before {
+    left: 115%;
+}
+
+.Auth .Submit:focus {
+    outline: none;
+}
+
+.Auth .Submit:focus::before {
+    left: 115%;
+}
+
+.Auth .InputWrapper {
+    position: relative;
+    margin-bottom: 20px !important;
+}
+
+.InputWrapper input {
+	width: 300px;
+}
+
+.Auth .AuthForm .ToggleFormType {
+    color: #FFE401;
+    text-decoration: underline;
+    font-size: 18px;
+    padding-top: 15px;
+    cursor: pointer;
+}

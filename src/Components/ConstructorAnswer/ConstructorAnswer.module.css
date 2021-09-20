@@ -1,0 +1,31 @@
+.ConstructorAnswer {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    position: relative;
+}
+
+.ConstructorAnswer .Label {
+    color: #2C3532;
+    margin-right: 8px !important;
+    white-space:nowrap;
+    font-size: 16px;
+}
+
+.ConstructorAnswer input {
+    color: #2C3532;
+    border: 0;
+    box-shadow: 0px -1px 23px -7px rgba(34, 60, 80, 0.2);
+    padding: 6px 8px;
+    width: 100%;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.ConstructorAnswer .RemoveAnswer {
+    position: absolute;
+    right: -20px;
+    color: #F03C1E;
+    cursor: pointer;
+    font-size: 18px;
+}

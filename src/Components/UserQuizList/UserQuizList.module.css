@@ -1,0 +1,97 @@
+.UserQuizList {
+    background: #E3C57F;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.UserQuizList .OptionBar {
+    width: 100%;
+    height: 74px;
+}
+
+.UserQuizList .QuizCardsWrapper {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.UserQuizList .UserQuizAlert {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    position: absolute;
+    width: calc(100vw - 10px);
+}
+
+.UserQuizList .UserQuizLoaderWrapper {
+    width: 100%;
+    left: 0;
+    top: 140px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.UserQuizList .UserQuiz {
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid #08105B;
+    background: #FBE8A6;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.UserQuizList .UserQuiz p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.UserQuizList .UserQuiz .UserQuizIconsWrapper {
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    right: 5px;
+}
+
+.UserQuizList .UserQuiz .UserQuizIconsWrapper div {
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.UserQuizList .UserQuiz .UserQuizIconsWrapper div:first-child {
+    margin-right: 10px;
+    color: #A8D1E7;
+}
+
+.UserQuizList .UserQuiz .UserQuizIconsWrapper div:last-child {
+    color: #F76D6D;
+}
+
+@media (max-width: 1279px) {
+    .UserQuizList .QuizCardsWrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 960px) {
+    .UserQuizList .QuizCardsWrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 645px) {
+    .UserQuizList .QuizCardsWrapper {
+        grid-template-columns: 1fr;
+    }
+}

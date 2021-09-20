@@ -1,0 +1,78 @@
+.QuizListItem {
+    color: #fff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr 220px;
+    font-size: 35px;
+    grid-column-gap: 15px;
+    text-decoration: none;
+    margin-bottom: 19px;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.QuizListItem::before {
+    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: -1.6em;
+    cursor: initial;
+    opacity: 0;
+    transition: .3s;
+}
+
+.QuizListItem::after {
+    content: '\f053';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: -1.6em;
+    cursor: initial;
+    opacity: 0;
+    transition: .3s;
+}
+
+.QuizListItem .Name, .Creator, .Date {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.QuizListItem:hover::before {
+    opacity: 1;
+    left: -35px;
+}
+.QuizListItem:hover::after {
+    opacity: 1;
+    right: -35px;
+}
+
+@media (max-width: 705px) {
+    .QuizListItem {
+        font-size: 25px;
+        justify-items: center;
+        grid-template-columns: 4fr 3fr 148px;
+    }
+
+    .QuizListItem:before, .QuizListItem:after {
+        content: ""
+    }
+
+}
+
+@media (max-width: 480px) {
+    .QuizListItem {
+        font-size: 16px;
+        justify-items: center;
+        grid-template-columns: 4fr 3fr 95px;
+    }
+
+    .QuizListItem:before, .QuizListItem:after {
+        content: ""
+    }
+
+}

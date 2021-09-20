@@ -1,0 +1,41 @@
+.UserQuiz {
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid #08105B;
+    background: #FBE8A6;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.UserQuiz p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+.UserQuiz .UserQuizIconsWrapper {
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    right: 5px;
+}
+
+.UserQuiz .UserQuizIconsWrapper .Icon {
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.UserQuiz .UserQuizIconsWrapper .Icon:first-child {
+    margin-right: 10px;
+    color: #A8D1E7;
+}
+
+.UserQuiz .UserQuizIconsWrapper .Icon:last-child {
+    color: #F76D6D;
+}

@@ -1,0 +1,215 @@
+ *, *:before, *:after {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ .search {
+	 position: absolute;
+	 top: 310px;
+	 left: 50%;
+	 margin-left: -150px;
+	 margin-top: -25px;
+	 width: 300px;
+	 height: 50px;
+}
+ .search__border {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 50px;
+	 height: 100%;
+	 border: 3px solid #fff;
+	 border-radius: 10rem;
+	 transform: translate(-50%, -50%);
+	 transition: width 0.4s 0.4s;
+}
+ #trigger:checked ~ .search__border {
+	 transition: width 0.4s 0.2s;
+	 width: 100%;
+}
+ #trigger:checked ~ .search__border:after {
+	 width: 0;
+	 transition: width 0.2s cubic-bezier(0.42, -0.7, 0.62, 1.25);
+}
+ .search__border:after {
+	 content: "";
+	 position: absolute;
+	 bottom: -1.8rem;
+	 right: -1.8rem;
+	 width: 25px;
+	 height: 3px;
+	 background: #fff;
+	 border-radius: 5px;
+	 transform-origin: 100% 50%;
+	 transform: rotate(225deg) translateX(3rem);
+	 transition: width 0.2s 0.8s;
+}
+ .search__input {
+	 position: relative;
+	 width: 250px;
+	 height: 50px;
+	 padding: 7.5px 0 7.5px 20px;
+	 background: transparent;
+	 outline: none;
+	 border: none;
+	 font-size: 20px;
+	 color: #fff;
+	 z-index: -1;
+	 opacity: 0;
+	 transition: opacity 0.2s;
+}
+ #trigger:checked ~ .search__input {
+	 opacity: 1;
+	 z-index: auto;
+	 transition: opacity 0.2s 0.6s;
+}
+ .search__checkbox {
+	 position: absolute;
+	 top: -9999px;
+	 left: -9999px;
+	 opacity: 0;
+	 z-index: -10;
+}
+ .search__label-init {
+	 z-index: 2;
+	 position: absolute;
+	 top: 0;
+	 left: 123px;
+	 width: 63.75px;
+	 height: 60px;
+	 cursor: pointer;
+}
+ #trigger:checked ~ .search__label-init {
+	 transform: scale(0);
+}
+ .search__label-active {
+	 z-index: 3;
+	 position: absolute;
+	 top: 12.5px;
+	 right: 12.5px;
+	 width: 25px;
+	 height: 25px;
+	 cursor: pointer;
+	 transform: scale(0);
+}
+ #trigger:checked ~ .search__label-active {
+	 transition: transform 0 0.6s;
+	 transform: scale(1);
+}
+ .search__close {
+	 position: absolute;
+	 top: 12.5px;
+	 right: 12.5px;
+	 width: 25px;
+	 height: 25px;
+	 cursor: pointer;
+	 z-index: -1;
+}
+ #trigger:checked ~ .search__close {
+	 z-index: auto;
+}
+ #trigger:checked ~ .search__close:before {
+	 transform: rotate(-45deg);
+	 opacity: 1;
+	 transition: transform 0.2s 0.6s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s 0.6s;
+}
+ #trigger:checked ~ .search__close:after {
+	 transform: rotate(45deg);
+	 opacity: 1;
+	 transition: transform 0.2s 0.8s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s 0.8s;
+}
+ .search__close:before, .search__close:after {
+	 content: "";
+	 position: absolute;
+	 top: 10px;
+	 left: 0;
+	 width: 100%;
+	 height: 5px;
+	 background: #fff;
+	 border-radius: 0.5rem;
+	 opacity: 0;
+}
+ .search__close:before {
+	 transform: rotate(-45deg) translateX(2rem);
+	 transition: transform 0.2s, opacity 0.1s 0.1s;
+}
+ .search__close:after {
+	 transform: rotate(45deg) translateX(2rem);
+	 transition: transform 0.2s 0.2s, opacity 0.1s 0.3s;
+}
+
+.QuizResultText {
+	color: #D31027;
+	font-size: 32px;
+	margin-right: 8px;
+}
+
+.QuizResultTextWrapper {
+	position: absolute;
+	top: 360px;
+	cursor: pointer;
+    left: 50%;
+    transform: translate(-50%, 0);
+	display: flex;
+	transition: .2s;
+}
+
+.QuizResultTextWrapper:hover {
+	opacity: 0.6;
+}
+
+.QuizResultTextWrapper i {
+	font-size: 30px;
+	line-height: 1.3;
+	color: #D31027;
+}
+ 
+@media (max-width: 810px) {
+	.search {
+		top: 380px;
+	}
+
+	.QuizResultTextWrapper {
+		top: 435px;
+	}
+}
+
+@media (max-width: 705px) {
+	.search {
+		top: 310px;
+	}
+
+	.QuizResultTextWrapper {
+		top: 350px;
+	}
+}
+
+@media (max-width: 570px) {
+	.search {
+		top: 360px;
+	}
+
+	.QuizResultTextWrapper {
+		top: 400px;
+	}
+}
+
+@media (max-width: 425px) {
+	.search {
+		top: 250px;
+	}
+
+	.QuizResultTextWrapper {
+		top: 290px;
+	}
+}
+
+@media (max-width: 380px) {
+	.search {
+		top: 270px;
+	}
+
+	.QuizResultTextWrapper {
+		top: 320px;
+	}
+}

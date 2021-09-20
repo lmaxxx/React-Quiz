@@ -1,0 +1,98 @@
+.PreStartQuizAlert {
+    position: fixed;
+    width: 520px;
+    min-height: 250px;
+    background: #93CDF2;
+    color: #fff;
+    top: calc(100% - 50% - 25%);
+    left: calc(100% - 50% - 260px);
+    z-index: 6;
+    transition: .4s;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PreStartQuizAlert .CloseIcon {
+    color: #F33950;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.PreStartQuizAlert .CloseIcon:hover {
+    color: #93291E;
+}
+
+
+.PreStartQuizAlert .Param {
+    font-size: 30px;
+}
+.PreStartQuizAlert .RowWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.PreStartQuizAlert .RowWrapper .Param:first-child {
+    margin-right: 15px;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.PreStartQuizAlert .StartButton {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #F48989;
+    position: relative; 
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 16px;
+    font-family: 'Zen Dots', cursive;
+}
+
+.PreStartQuizAlert .StartButton::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #e31254;
+}
+
+.PreStartQuizAlert .StartButton:active::before {
+    height: 0;
+}
+
+.PreStartQuizAlert .StartButton:active{
+    top: 5px;
+}
+
+@media (max-width: 570px) {
+    .PreStartQuizAlert {
+        width: 400px;
+        left: calc(100% - 50% - 200px);
+    }
+}
+
+@media (max-width: 425px) {
+    .PreStartQuizAlert {
+        width: 300px;
+        left: calc(100% - 50% - 150px);
+    }
+
+    .PreStartQuizAlert .Param {
+        font-size: 20px;
+    }
+}

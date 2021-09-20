@@ -1,0 +1,22 @@
+.QuizChooseAnimation {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 100vh;
+    height: 100vh;
+    transition: top 1.7s ease;
+    display: grid;
+    place-items: center;
+}
+.QuizChooseAnimation img {
+    height: 40%;
+}
+
+.QuizChooseAnimation.TrueAnswer {
+    background: rgb(102, 187, 106, 0.8);
+}
+
+.QuizChooseAnimation.FalseAnswer {
+    background: rgb(255, 112, 67, 0.8);
+}

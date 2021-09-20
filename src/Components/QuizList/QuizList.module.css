@@ -1,0 +1,25 @@
+.QuizList {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 180px;
+    display: grid;
+    place-items: center;
+}
+
+.LoaderWrapper {
+    position: absolute;
+    top: 480px;
+    left: calc(100% - 50% - 75px);
+}
+
+.QuizList .Error {
+    color: #fff;
+    font-size: 35px;
+}
+
+@media (max-width: 705px) {
+    .QuizList {
+        margin-top: 150px;
+    }
+}
