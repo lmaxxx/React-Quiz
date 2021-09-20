@@ -6,7 +6,6 @@ import 'antd/dist/antd.css'
 import {connect} from 'react-redux'
 import {checkUserUrlInLocalStorage} from './store/auth/auth_action'
 import {useEffect} from 'react'
-import Navigation from './Components/Navigation/Navigation'
 import UserQuizList from './Components/UserQuizList/UserQuizList'
 import QuizConstructor from './Components/QuizConstructor/QuizConstructor'
 
@@ -15,11 +14,11 @@ function App(props) {
   return (
 
     <Switch >
-      <Route path={`mquiz-react.netlify.app/`} exact component={MainPage}/>
-      <Route path={`mquiz-react.netlify.app/auth`} component={Auth} />
-      <Route path={`mquiz-react.netlify.app/quiz`} component={ActiveQuizWrapper}/>
-      <Route path={`mquiz-react.netlify.app/my-quizes`} component={UserQuizList}/>
-      <Route path={`mquiz-react.netlify.app/constructor`} component={QuizConstructor}/>
+      <Route path={`/`} exact component={MainPage}/>
+      <Route path={`/auth`} component={Auth} />
+      <Route path={`/quiz`} component={ActiveQuizWrapper}/>
+      <Route path={`/my-quizes`} component={UserQuizList}/>
+      <Route path={`/constructor`} component={QuizConstructor}/>
     </Switch>       
   
   )
