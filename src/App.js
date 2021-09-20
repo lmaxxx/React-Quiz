@@ -13,14 +13,13 @@ function App(props) {
   useEffect(() => props.checkUserUrlInLocalSTORAGE() ,[])
   return (
 
-    // <Switch >
-    //   <Route path={`/`} exact component={MainPage}/>
-    //   <Route path={`/auth`} component={Auth} />
-    //   <Route path={`/quiz`} component={ActiveQuizWrapper}/>
-    //   <Route path={`/my-quizes`} component={UserQuizList}/>
-    //   <Route path={`/constructor`} component={QuizConstructor}/>
-    // </Switch>       
-    <MainPage></MainPage>
+    <Switch >
+      <Route path={`/`} exact component={MainPage}/>
+      <Route path={`/auth`} component={Auth} />
+      <Route path={`/quiz`} component={ActiveQuizWrapper}/>
+      <Route path={`/my-quizes`} component={UserQuizList}/>
+      <Route path={`/constructor`} component={QuizConstructor}/>
+    </Switch>       
   
   )
 }
