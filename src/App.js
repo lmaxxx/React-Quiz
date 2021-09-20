@@ -15,11 +15,11 @@ function App(props) {
   return (
 
     <Switch >
-      <Route path={`${process.env.PUBLIC_URL}/`} exact component={MainPage}/>
-      <Route path={`${process.env.PUBLIC_URL}/auth`} component={Auth} />
-      <Route path={`${process.env.PUBLIC_URL}/quiz`} component={ActiveQuizWrapper}/>
-      <Route path={`${process.env.PUBLIC_URL}/my-quizes`} component={UserQuizList}/>
-      <Route path={`${process.env.PUBLIC_URL}/constructor`} component={QuizConstructor}/>
+      <Route path={`mquiz-react.netlify.app/`} exact component={MainPage}/>
+      <Route path={`mquiz-react.netlify.app/auth`} component={Auth} />
+      <Route path={`mquiz-react.netlify.app/quiz`} component={ActiveQuizWrapper}/>
+      <Route path={`mquiz-react.netlify.app/my-quizes`} component={UserQuizList}/>
+      <Route path={`mquiz-react.netlify.app/constructor`} component={QuizConstructor}/>
     </Switch>       
   
   )
