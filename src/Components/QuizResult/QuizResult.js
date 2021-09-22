@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {EndTimer} from '../../store/active_quiz/active_quiz_action'
 import classes from './QuizResult.module.css'
 import {NavLink} from 'react-router-dom'
+import {ToggleAlert} from '../../store/main_page/main_page_action'
 
 
 const QuizResult = (props) => {
@@ -20,6 +21,11 @@ const QuizResult = (props) => {
     if(props.quiz_end_time !== 0) {
         localStorage.setItem("active-quiz", JSON.stringify(quiz))
     }    
+
+    const clearLocalHost = () => {
+        localStorage.removeItem("active-quiz")
+        props.onToggle()
+    }
     
     if(truePercent === 100 || truePercent === 0) styleForGreen = {...styleForGreen, border: "0", borderRadius: "6px"}
     return ( 
@@ -38,7 +44,7 @@ const QuizResult = (props) => {
                 <p>Time: <strong className={classes.Res}>{(~~time).toFixed(1)}s</strong></p>
                 <p>Average question time: <strong className={classes.Res}>{(~~time / quiz.tasks.length).toFixed(1)}s</strong></p>
             </div>
-            <NavLink to={`${process.env.PUBLIC_URL}/`} ><button className={classes.BackButton}>Go back</button></NavLink>
+            <NavLink to={`${process.env.PUBLIC_URL}/`} ><button onClick={clearLocalHost} className={classes.BackButton}>Go back</button></NavLink>
         </div>
     )
 }
@@ -52,7 +58,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         endTimer: () => dispatch(EndTimer()),
-        
+        onToggle: (smth) => dispatch(ToggleAlert(smth))
     }
 }
  
