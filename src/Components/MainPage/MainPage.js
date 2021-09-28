@@ -15,7 +15,7 @@ const MainPage = props => {
         <div className={classes.MainPage}>
             <Navigation />
             <Transition  timeout={500} in={props.show_alert} >{state => <PreStartQuizAlert animClass={state} />}</Transition>
-            <h1 className={classes.Title}><strong>Create</strong> and <strong>perfom</strong> quizzes yourself.<br></br>Quiz system for <strong>everyone</strong></h1>
+            <h1 className={classes.Title}><strong>Create</strong> and <strong>perfom</strong> quizzes yourself.<br></br><strong>SpireTest</strong> for <strong>everyone</strong></h1>
             <SearchForm />
             <QuizList />
         </div>
